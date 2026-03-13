@@ -135,7 +135,7 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
                       <div>
                         <div className="w-16 h-1 bg-[#c5a059] mb-8 rounded-full" />
                         <h2 className="text-4xl font-bold tracking-tighter mb-4 text-white uppercase">Pre-save <br/><span className="text-[#c5a059]">Confirmado!</span></h2>
-                        <p className="text-white/50 text-base leading-relaxed">Não pare por aqui. Entre para as comunidades oficiais do <span className="text-white font-bold">Jottanine</span> e receba spoilers, bastidores e sorteios exclusivos.</p>
+                        <p className="text-white/50 text-base leading-relaxed">Não pare por aqui. Entre para as comunidades oficiais do <span className="text-white font-bold">Jotta Nine</span> e receba spoilers, bastidores e sorteios exclusivos.</p>
                       </div>
 
                       <div className="space-y-4">
