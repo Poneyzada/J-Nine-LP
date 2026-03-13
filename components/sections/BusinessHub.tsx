@@ -2,8 +2,30 @@
 
 import { motion } from "framer-motion";
 import { Mic, PenTool } from "lucide-react";
+import { useState } from "react";
 
 export default function BusinessHub() {
+  const [subject, setSubject] = useState("CONTRATAR SHOWS");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!name || !phone) return;
+
+    let baseMsg = "";
+    if (subject === "CONTRATAR SHOWS") {
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\nGostaria de saber mais informações sobre a contratação de SHOWS do JOTTANINE.`;
+    } else if (subject === "SOLICITAR COMPOSIÇÃO") {
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\nGostaria de solicitar um orçamento para uma COMPOSIÇÃO exclusiva do JOTTANINE.`;
+    } else {
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\nTenho interesse em negociar um FEAT / COLAB com o JOTTANINE.`;
+    }
+
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(baseMsg)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <section id="business" className="relative py-40 px-6 min-h-[90vh] flex items-center bg-[var(--background)]">
       
@@ -83,11 +105,15 @@ export default function BusinessHub() {
             <p className="text-xs text-white/40 uppercase tracking-widest">Bate-papo Direto com a Equipe</p>
           </div>
 
-          <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6 relative z-10" onSubmit={handleSubmit}>
             <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Categoria</label>
               <div className="relative">
-                <select className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] focus:outline-none appearance-none cursor-pointer hover:border-white/20 transition-colors">
+                <select 
+                  value={subject}
+                  onChange={(e) => setSubject(e.target.value)}
+                  className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] focus:outline-none appearance-none cursor-pointer hover:border-white/20 transition-colors"
+                >
                   <option>CONTRATAR SHOWS</option>
                   <option>SOLICITAR COMPOSIÇÃO</option>
                   <option>FEAT / COLAB</option>
@@ -98,16 +124,30 @@ export default function BusinessHub() {
             
             <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Nome ou Empresa</label>
-              <input type="text" placeholder="Gabi da Produtora" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
+              <input 
+                type="text" 
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Ex: Gabi da Produtora" 
+                required
+                className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" 
+              />
             </div>
 
             <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Contato (WhatsApp)</label>
-              <input type="tel" placeholder="(11) 99999-9999" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
+              <input 
+                type="tel" 
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Ex: (11) 99999-9999" 
+                required
+                className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" 
+              />
             </div>
 
-            <button className="w-full py-6 mt-4 bg-[#c5a059] text-black font-extrabold rounded-2xl shadow-[0_0_30px_rgba(197,160,89,0.3)] hover:scale-[1.02] transition-transform uppercase tracking-widest text-[11px]">
-              Enviar Solicitação
+            <button type="submit" className="w-full py-6 mt-4 bg-[#c5a059] text-black font-extrabold rounded-2xl shadow-[0_0_30px_rgba(197,160,89,0.3)] hover:scale-[1.02] transition-transform uppercase tracking-widest text-[11px]">
+              Falar no WhatsApp
             </button>
           </form>
         </motion.div>
