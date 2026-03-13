@@ -12,10 +12,10 @@ export default function BusinessHub() {
          <img 
            src="/J-nine-foto.jpeg"
            alt="JOTTANINE Live"
-           className="w-full h-full object-cover object-top opacity-50 grayscale transition-opacity duration-1000"
+           className="w-full h-full object-cover object-[center_20%] opacity-80 mix-blend-luminosity brightness-75 transition-opacity duration-1000"
          />
-         <div className="absolute inset-0 bg-gradient-to-r from-[var(--background)] via-[var(--background)]/90 to-transparent" />
-         <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-transparent to-[var(--background)]" />
+         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0b0a] via-[#0f0b0a]/80 to-transparent" />
+         <div className="absolute inset-0 bg-gradient-to-t from-[#0f0b0a] via-transparent to-[#0f0b0a]" />
       </div>
 
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] glow-orb opacity-30" />
