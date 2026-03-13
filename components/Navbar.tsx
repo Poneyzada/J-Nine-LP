@@ -30,7 +30,7 @@ export default function Navbar() {
       >
         <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
           <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white group">
-            JOTTA<span className="text-[#c5a059] group-hover:text-white transition-colors">NINE</span>
+            Jotta<span className="text-[#c5a059] group-hover:text-white transition-colors">nine</span>
           </a>
 
           {/* Desktop Navigation */}
