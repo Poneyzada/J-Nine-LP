@@ -1,29 +1,71 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Início", href: "#" },
+    { name: "Shows", href: "#show" },
+    { name: "Bio", href: "#" },
+    { name: "Social", href: "#" },
+  ];
+
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-4xl"
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "py-4 bg-black/80 backdrop-blur-xl border-b border-white/5" : "py-8 bg-transparent"
+      }`}
     >
-      <div className="bg-black/40 backdrop-blur-xl border border-white/10 rounded-full px-8 py-4 flex items-center justify-between shadow-2xl">
-        <div className="text-[#c5a059] font-bold tracking-tighter text-xl">JN.</div>
-        
-        <div className="hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-widest text-white/70">
-          <Link href="#" className="hover:text-[#c5a059] transition-colors">Início</Link>
-          <a href="https://open.spotify.com/user/31yspvh5mwsopagom4m7zxc6antm?si=Bk8s-LqyQqqoBOHnr6Pshw" target="_blank" rel="noopener noreferrer" className="hover:text-[#c5a059] transition-colors font-bold text-[#1DB954]">Spotify</a>
-          <Link href="#" className="hover:text-[#c5a059] transition-colors">Shows</Link>
-          <Link href="#" className="hover:text-[#c5a059] transition-colors">Negócios</Link>
+      <div className="container mx-auto px-6 flex items-center justify-between">
+        <a href="#" className="text-2xl font-bold tracking-tighter text-white group">
+          JOTTA<span className="text-[#c5a059] group-hover:text-white transition-colors">NINE</span>
+        </a>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name}
+              href={link.href}
+              className="text-sm font-medium text-white/60 hover:text-[#c5a059] transition-colors tracking-widest uppercase"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a 
+            href="https://open.spotify.com/user/31yspvh5mwsopagom4m7zxc6antm?si=Bk8s-LqyQqqoBOHnr6Pshw" 
+            target="_blank" 
+            className="px-6 py-2.5 bg-[#1DB954] text-white font-bold rounded-full text-xs hover:scale-105 transition-all shadow-[0_0_20px_rgba(29,185,84,0.3)]"
+          >
+            OUVIR AGORA
+          </a>
         </div>
 
-        <button className="bg-[#c5a059] text-black text-[10px] font-bold px-5 py-2 rounded-full hover:scale-105 transition-transform uppercase tracking-widest">
-          Pre-save
-        </button>
+        {/* Mobile Navigation - Simplified for better fit */}
+        <div className="md:hidden flex items-center gap-4">
+           <a 
+            href="#show" 
+            className="text-[10px] font-bold text-white/60 uppercase tracking-tighter"
+          >
+            Shows
+          </a>
+          <a 
+            href="https://open.spotify.com/user/31yspvh5mwsopagom4m7zxc6antm?si=Bk8s-LqyQqqoBOHnr6Pshw" 
+            target="_blank" 
+            className="px-4 py-2 bg-[#1DB954] text-white font-bold rounded-full text-[10px] hover:scale-105 transition-all"
+          >
+            SPOTIFY
+          </a>
+        </div>
       </div>
-    </motion.nav>
+    </nav>
   );
 }
