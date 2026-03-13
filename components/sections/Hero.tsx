@@ -70,10 +70,10 @@ export default function Hero() {
 
               {/* Stats Footer inside the image */}
               <div className="absolute bottom-6 left-6 right-6 glass-panel rounded-3xl p-6 flex justify-between items-center">
-                 <div>
-                    <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest block mb-1">Plays</span>
-                    <span className="text-2xl font-black text-white">1M+</span>
-                 </div>
+                  <div className="text-right">
+                    <p className="text-2xl font-black text-[#c5a059] leading-none">81M+</p>
+                    <p className="text-[8px] uppercase tracking-widest text-white/40 font-bold">Plays Totais</p>
+                  </div>
                  <div className="w-px h-10 bg-white/10" />
                  <div>
                     <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest block mb-1">Gravadora</span>

@@ -17,9 +17,8 @@ const albums = [
   {
     title: "Fechamento (part. JOTTANINE)",
     type: "Feat" as FilterType,
-    // Using a more appropriate placeholder for now
-    cover: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800",
-    links: { spotify: "https://open.spotify.com/track/4d9K3VpP9JjY2Bw4P6c9zM", youtube: "#", apple: "#" },
+    cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
+    links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "#", apple: "#" },
     isSong: true,
   },
   {
