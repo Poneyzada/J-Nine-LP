@@ -33,7 +33,7 @@ export default function Compositions() {
               Obras <br/><span className="text-[#c5a059] font-black">Compostas.</span>
             </h2>
             <p className="text-white/40 mt-6 max-w-lg leading-relaxed">
-              Letras, métricas e melodias que ganharam voz em diversos artistas do cenário nacional. A assinatura Jottanine nos bastidores dos hits.
+              Letras, métricas e melodias que ganharam voz em diversos artistas do cenário nacional. A assinatura Jotta Nine nos bastidores dos hits.
             </p>
             <div className="flex gap-4 pt-8">
               <a href="#business" className="inline-flex items-center gap-2 px-10 py-4 glass-panel border border-[#c5a059]/30 text-white font-black rounded-full text-[10px] uppercase tracking-[0.15em] hover:bg-[#c5a059] hover:text-black hover:scale-[1.02] transition-all shadow-[0_10px_30px_rgba(197,160,89,0.1)]">
