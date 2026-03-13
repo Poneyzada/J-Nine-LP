@@ -2,49 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 13, 11, 10;
-  --background-end-rgb: 0, 0, 0;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  font-family: 'Outfit', sans-serif;
-}
-
-h1, h2, h3, .heading-serif {
-  font-family: 'Playfair Display', serif;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@layer base {
+  :root {
+    --background: #0f0b0a; /* Very dark rich brown/black */
+    --background-surface: #1a1411; /* Slightly lighter brown surface */
+    --background-card: #241d19; /* Lighter still for cards */
+    --foreground: #ffffff;
+    --primary: #c5a059; /* The copper/gold accent */
+    --primary-glow: rgba(197, 160, 89, 0.15);
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+@layer base {
+  body {
+    @apply text-foreground bg-[var(--background)];
+    font-family: 'Outfit', sans-serif;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  h1, h2, h3, .heading-serif {
+    font-family: 'Playfair Display', serif;
   }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+  }
+  .glass-panel {
+    @apply bg-[var(--background-surface)]/60 backdrop-blur-2xl border border-white/5;
+  }
+  .glow-orb {
+    @apply absolute rounded-full blur-[120px] pointer-events-none mix-blend-screen;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
 }
 
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: var(--background-card); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
 

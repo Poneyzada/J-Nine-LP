@@ -18,40 +18,49 @@ const compositions = [
 
 export default function Compositions() {
   return (
-    <section id="compositions" className="py-32 bg-zinc-950 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="compositions" className="py-32 bg-[var(--background-card)] px-6 relative overflow-hidden border-y border-white/5">
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] glow-orb opacity-20" />
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-mono text-[9px] uppercase tracking-[0.7em] text-[#c5a059]/60 mb-4">Writer Experience</p>
-            <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">Obras <br/><span className="italic text-[#c5a059]">Compostas.</span></h2>
-            <p className="text-white/30 mt-6 max-w-lg leading-relaxed">Letras, métricas e melodias que ganharam voz em diversos artistas do cenário nacional.</p>
+            <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] mb-4 block">Writer Experience</span>
+            <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter text-white">
+              Obras <br/><span className="italic text-[#c5a059] heading-serif font-medium">Compostas.</span>
+            </h2>
+            <p className="text-white/40 mt-6 max-w-lg leading-relaxed">
+              Letras, métricas e melodias que ganharam voz em diversos artistas do cenário nacional. A assinatura JOTTANINE nos bastidores dos hits.
+            </p>
             <div className="flex gap-4 pt-8">
-              <a href="#business" className="inline-flex items-center gap-2 px-10 py-4 bg-[#c5a059] text-black font-black rounded-full text-[11px] uppercase tracking-[0.15em] hover:scale-[1.02] transition-transform shadow-[0_10px_30px_rgba(197,160,89,0.2)]">
+              <a href="#business" className="inline-flex items-center gap-2 px-10 py-4 glass-panel border border-[#c5a059]/30 text-white font-black rounded-full text-[10px] uppercase tracking-[0.15em] hover:bg-[#c5a059] hover:text-black hover:scale-[1.02] transition-all shadow-[0_10px_30px_rgba(197,160,89,0.1)]">
                 Contratar Composição
               </a>
             </div>
           </motion.div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {compositions.map((item, i) => (
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ delay: i * 0.1 }}
-                className="aspect-square relative group overflow-hidden rounded-[2.5rem]"
+                className="aspect-square relative group overflow-hidden rounded-[3rem] glass-card border border-white/10"
               >
-                <img src={item.cover} alt={item.title} className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-110" />
-                <div className="absolute inset-0 p-6 flex flex-col justify-between bg-black/40">
-                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur text-[#c5a059]">
-                    <PenTool className="w-5 h-5" />
+                <img src={item.cover} alt={item.title} className="absolute inset-0 w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-110 opacity-60" />
+                <div className="absolute inset-0 p-8 flex flex-col justify-between bg-gradient-to-t from-black/90 via-black/40 to-black/20">
+                  <div className="w-12 h-12 rounded-full glass-panel flex items-center justify-center backdrop-blur shadow-[0_0_20px_rgba(197,160,89,0.2)]">
+                    <PenTool className="w-5 h-5 text-[#c5a059]" />
                   </div>
                   <div>
-                    <span className="text-[10px] font-black text-white/50 uppercase tracking-widest">Interpretada por {item.artist}</span>
-                    <h4 className="text-xl font-black uppercase mt-1 text-white">{item.title}</h4>
+                    <span className="px-3 py-1 rounded-full glass-panel text-[8px] font-black text-white/70 uppercase tracking-widest mb-3 inline-block">
+                      Interpretada por {item.artist}
+                    </span>
+                    <h4 className="text-2xl font-bold uppercase text-white leading-tight">{item.title}</h4>
                   </div>
                 </div>
               </motion.div>

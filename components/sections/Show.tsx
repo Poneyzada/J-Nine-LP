@@ -21,52 +21,61 @@ export default function Show() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <section id="videos" className="relative py-32 bg-black px-6 overflow-hidden border-t border-white/5">
+    <section id="videos" className="relative py-32 bg-[var(--background)] px-6 overflow-hidden">
+      <div className="absolute right-0 top-1/2 w-[500px] h-[500px] glow-orb opacity-20 -translate-y-1/2 translate-x-1/2" />
+      
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}
-           className="mb-16"
+           className="mb-16 md:text-center"
         >
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter text-white">
-            Visual <br/><span className="text-[#c5a059] italic">Statement.</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] block mb-2">Cinematic Vision</span>
+          <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
+            Visual <span className="text-[#c5a059] italic heading-serif font-medium">Statement.</span>
           </h2>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Main Video Player */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            className="lg:col-span-8 overflow-hidden rounded-[3rem] border border-white/5 shadow-2xl relative aspect-video group bg-zinc-900"
+            className="lg:col-span-8 overflow-hidden rounded-[3rem] glass-card p-2 relative aspect-[16/10] group"
           >
-            {!isPlaying ? (
-              <div 
-                className="w-full h-full relative cursor-pointer" 
-                onClick={() => setIsPlaying(true)}
-              >
-                <img 
-                  src="/J-nine-foto.jpeg" 
-                  className="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-1000" 
-                  alt="Video Thumbnail"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-full bg-[#c5a059]/80 backdrop-blur flex items-center justify-center shadow-2xl hover:scale-110 transition-transform">
-                    <Play className="text-white w-8 h-8 fill-white ml-1" />
+            <div className="w-full h-full rounded-[2.5rem] overflow-hidden relative">
+              {!isPlaying ? (
+                <div 
+                  className="w-full h-full relative cursor-pointer" 
+                  onClick={() => setIsPlaying(true)}
+                >
+                  {/* Keeping thumbnail dynamic based on selection */}
+                  <img 
+                    src={`https://img.youtube.com/vi/${activeVideo}/maxresdefault.jpg`} 
+                    onError={(e) => { e.currentTarget.src = `https://img.youtube.com/vi/${activeVideo}/hqdefault.jpg`; }}
+                    className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0" 
+                    alt="Video Thumbnail"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                    <div className="w-24 h-24 rounded-full glass-panel flex items-center justify-center shadow-[0_0_50px_rgba(197,160,89,0.4)] hover:scale-110 transition-transform duration-300">
+                      <Play className="text-[#c5a059] w-10 h-10 ml-2 fill-[#c5a059]" />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ) : (
-              <iframe 
-                src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
-                className="w-full h-full"
-                frameBorder="0"
-                allowFullScreen
-                allow="autoplay; encrypted-media"
-              />
-            )}
+              ) : (
+                <iframe 
+                  src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allowFullScreen
+                  allow="autoplay; encrypted-media"
+                />
+              )}
+            </div>
           </motion.div>
 
-          <div className="lg:col-span-4 flex flex-col gap-4 max-h-[500px] overflow-y-auto pr-2 custom-scrollbar">
+          {/* Playlist */}
+          <div className="lg:col-span-4 flex flex-col gap-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
             {showVideos.map((video) => (
               <motion.div
                 key={video.title}
@@ -76,21 +85,23 @@ export default function Show() {
                   setActiveVideo(video.id);
                   setIsPlaying(true);
                 }}
-                className={`p-4 rounded-[2rem] bg-[#161311] border border-white/5 flex gap-5 cursor-pointer group hover:border-[#c5a059]/30 transition-all ${activeVideo === video.id && isPlaying ? 'border-[#c5a059]/50 bg-[#1c1815]' : ''}`}
+                className={`p-4 rounded-[2rem] glass-card flex gap-5 cursor-pointer group hover:border-[#c5a059]/50 transition-all ${activeVideo === video.id ? 'border-[#c5a059] bg-[var(--background-card)]' : ''}`}
               >
-                <div className="w-24 h-16 rounded-2xl overflow-hidden relative shrink-0">
+                <div className="w-28 h-20 rounded-2xl overflow-hidden relative shrink-0">
                   <img 
                     src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`} 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform grayscale group-hover:grayscale-0"
                     alt={video.title}
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Play size={16} className="fill-white text-white" />
+                    <Play size={20} className="fill-[#c5a059] text-[#c5a059]" />
                   </div>
                 </div>
                 <div className="flex flex-col justify-center overflow-hidden">
-                  <h5 className="text-[10px] font-black uppercase leading-tight truncate text-white">{video.title}</h5>
-                  <p className="text-[8px] text-[#c5a059] uppercase mt-1 tracking-widest font-bold font-mono">{video.type}</p>
+                  <h5 className="text-[12px] font-bold uppercase leading-tight text-white mb-2">{video.title}</h5>
+                  <span className="px-3 py-1 rounded-full glass-panel text-[8px] text-[#c5a059] uppercase tracking-widest font-bold w-max">
+                    {video.type}
+                  </span>
                 </div>
               </motion.div>
             ))}
