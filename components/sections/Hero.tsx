@@ -26,10 +26,10 @@ export default function Hero() {
           </span>
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tighter leading-[0.9] text-white">
             Descubra <br/>
-            JOTTA<span className="text-[#c5a059] font-black">NINE.</span>
+            Jotta<span className="text-[#c5a059] font-black">nine.</span>
           </h1>
           <p className="text-lg md:text-xl font-medium text-white/50 max-w-lg leading-relaxed mt-4">
-            JOTTANINE é uma experiência musical imersiva que mistura as raízes do underground baiano (BA/BR) com estética premium. Explore singles, composições e contratação de shows.
+            Jottanine é uma experiência musical imersiva que mistura as raízes do underground baiano (Bahia/Brasil) com estética premium. Explore singles, composições e contratação de shows.
           </p>
           
           <div className="mt-8 flex flex-wrap items-center gap-6">
@@ -62,7 +62,7 @@ export default function Hero() {
                  <svg viewBox="0 0 100 100" className="w-full h-full text-white/70">
                     <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                     <text className="text-[14px] font-bold uppercase tracking-[4px]" fill="currentColor">
-                      <textPath href="#curve">JOTTANINE • ARTISTA ORIGINAL •</textPath>
+                      <textPath href="#curve">JOTTANINE • Artista Original •</textPath>
                     </text>
                  </svg>
                  <div className="absolute w-2 h-2 bg-[#c5a059] rounded-full" />

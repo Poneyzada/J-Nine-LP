@@ -15,11 +15,11 @@ export default function BusinessHub() {
 
     let baseMsg = "";
     if (subject === "CONTRATAR SHOWS") {
-      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nGostaria de saber mais informações sobre a contratação de *shows* do *JOTTANINE*.`;
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nGostaria de saber mais informações sobre a contratação de *shows* do *Jottanine*.`;
     } else if (subject === "SOLICITAR COMPOSIÇÃO") {
-      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nGostaria de solicitar um orçamento para uma *composição* exclusiva do *JOTTANINE*.`;
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nGostaria de solicitar um orçamento para uma *composição* exclusiva do *Jottanine*.`;
     } else {
-      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nTenho interesse em negociar um *feat / colab* com o *JOTTANINE*.`;
+      baseMsg = `Olá equipe CARRERA'S!\nMe chamo ${name} (Contato: ${phone}).\n\nTenho interesse em negociar um *feat / colab* com o *Jottanine*.`;
     }
 
     const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(baseMsg)}`;
