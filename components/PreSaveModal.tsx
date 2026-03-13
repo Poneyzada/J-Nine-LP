@@ -76,18 +76,17 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
 
                 <div className="space-y-6">
                   <h3 className="text-base font-bold text-white/80 tracking-widest uppercase">FAÇA O PRE-SAVE E SEJA O PRIMEIRO A OUVIR</h3>
-                  <form className="flex flex-col space-y-4">
-                    <input 
-                      type="email" 
-                      placeholder="Seu melhor e-mail" 
-                      className="w-full px-6 py-4 bg-black border border-white/10 rounded-xl focus:border-[#c5a059] outline-none transition-colors text-white"
-                      required
-                    />
-                    <button className="w-full py-4 bg-[#c5a059] text-black font-bold rounded-xl hover:scale-[1.02] transition-transform shadow-xl">
-                       SOLICITAR ACESSO
-                    </button>
-                  </form>
-                  <p className="text-white/40 text-[10px] text-center uppercase tracking-widest">Sem login. Apenas música.</p>
+                  <div className="flex flex-col space-y-4">
+                    <a href="#" className="w-full py-4 bg-[#1DB954] text-white font-bold rounded-xl flex items-center justify-center hover:scale-[1.02] transition-transform shadow-xl">
+                       Pre-Save no Spotify
+                    </a>
+                    <a href="#" className="w-full py-4 bg-[#FC3C44] text-white font-bold rounded-xl flex items-center justify-center hover:scale-[1.02] transition-transform shadow-xl">
+                       Pre-Save na Apple Music
+                    </a>
+                    <a href="#" className="w-full py-4 bg-[#000000] border border-white/10 text-white font-bold rounded-xl flex items-center justify-center hover:scale-[1.02] transition-transform shadow-xl">
+                       Pre-Save na Deezer
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

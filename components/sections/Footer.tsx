@@ -22,7 +22,9 @@ export default function Footer() {
           YouTube
         </a>
         <a 
-          href="#" 
+          href="https://www.instagram.com/jottanine9?igsh=MTRiaTR5bzdndmlqOA==" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white/20 hover:text-[#c5a059] transition-all font-bold uppercase text-[10px] tracking-widest"
         >
           Instagram

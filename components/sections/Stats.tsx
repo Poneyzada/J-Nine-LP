@@ -19,7 +19,7 @@ export default function Stats() {
           <p className="font-mono text-[9px] text-white/50 uppercase tracking-[0.4em] mt-3 font-bold">Colaborações</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-          <p className="text-4xl lg:text-5xl font-black text-white">SP/BR</p>
+          <p className="text-4xl lg:text-5xl font-black text-white">BA/BR</p>
           <p className="font-mono text-[9px] text-white/50 uppercase tracking-[0.4em] mt-3 font-bold">Base Oficial</p>
         </motion.div>
       </div>

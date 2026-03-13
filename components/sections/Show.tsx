@@ -11,9 +11,9 @@ interface ShowVideo {
 }
 
 const showVideos: ShowVideo[] = [
-  { id: "dQw4w9WgXcQ", title: "Clipe Oficial: Luz Púrpura", type: "Music Video" },
-  { id: "dQw4w9WgXcQ", title: "Bastidores: Ciclos (Doc)", type: "Behind the Scenes" },
-  { id: "dQw4w9WgXcQ", title: "Ao Vivo no Studio 18h", type: "Live Performance" },
+  { id: "ypezb2IZFI4", title: "JOTTANINE - YouTube Video", type: "Videoclipe" },
+  { id: "dQw4w9WgXcQ", title: "Bastidores: Ciclos (Doc)", type: "Bastidores" },
+  { id: "dQw4w9WgXcQ", title: "Ao Vivo no Studio 18h", type: "Performance ao Vivo" },
 ];
 
 export default function Show() {
@@ -30,9 +30,9 @@ export default function Show() {
            whileInView={{ opacity: 1, y: 0 }}
            className="mb-16 md:text-center"
         >
-          <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] block mb-2">Cinematic Vision</span>
+          <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] block mb-2">Visão Cinematográfica</span>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tighter text-white">
-            Visual <span className="text-[#c5a059] italic heading-serif font-medium">Statement.</span>
+            Declaração <span className="text-[#c5a059] font-black">Visual.</span>
           </h2>
         </motion.div>
         

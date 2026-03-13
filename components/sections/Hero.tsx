@@ -22,22 +22,22 @@ export default function Hero() {
           className="flex flex-col gap-6"
         >
           <span className="text-[#c5a059] font-bold tracking-[0.3em] text-[10px] uppercase">
-            Official Artist Hub
+            Hub Oficial do Artista
           </span>
           <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7.5rem] font-bold tracking-tighter leading-[0.9] text-white">
-            Discover <br/>
-            JOTTA<span className="text-[#c5a059] italic heading-serif font-medium">NINE.</span>
+            Descubra <br/>
+            JOTTA<span className="text-[#c5a059] font-black">NINE.</span>
           </h1>
           <p className="text-lg md:text-xl font-medium text-white/50 max-w-lg leading-relaxed mt-4">
-            JOTTANINE is an immersive musical experience blending underground roots with premium aesthetic. Explore singles, compositions, and official bookings.
+            JOTTANINE é uma experiência musical imersiva que mistura as raízes do underground baiano (BA/BR) com estética premium. Explore singles, composições e contratação de shows.
           </p>
           
           <div className="mt-8 flex flex-wrap items-center gap-6">
             <a href="#music" className="px-10 py-4 bg-[#c5a059] text-black font-extrabold rounded-full hover:scale-105 transition-transform shadow-[0_0_40px_rgba(197,160,89,0.3)] text-xs tracking-widest uppercase">
-              Get Started
+              Ouvir Agora
             </a>
             <a href="#business" className="group flex items-center gap-3 text-white/70 hover:text-white font-bold text-xs uppercase tracking-widest transition-colors">
-              Booking <span className="group-hover:translate-x-2 transition-transform">→</span>
+              Contratar <span className="group-hover:translate-x-2 transition-transform">→</span>
             </a>
           </div>
         </motion.div>
@@ -53,7 +53,7 @@ export default function Hero() {
               <img 
                 src="/J-rosto.jpeg" 
                 alt="J NINE" 
-                className="absolute inset-0 w-full h-full object-cover grayscale opacity-90 transition-transform duration-1000 hover:scale-110"
+                className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-1000 hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               
@@ -62,7 +62,7 @@ export default function Hero() {
                  <svg viewBox="0 0 100 100" className="w-full h-full text-white/70">
                     <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                     <text className="text-[14px] font-bold uppercase tracking-[4px]" fill="currentColor">
-                      <textPath href="#curve">JOTTANINE • ORIGINAL ARTIST •</textPath>
+                      <textPath href="#curve">JOTTANINE • ARTISTA ORIGINAL •</textPath>
                     </text>
                  </svg>
                  <div className="absolute w-2 h-2 bg-[#c5a059] rounded-full" />
@@ -76,7 +76,7 @@ export default function Hero() {
                  </div>
                  <div className="w-px h-10 bg-white/10" />
                  <div>
-                    <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest block mb-1">Label</span>
+                    <span className="text-[10px] text-white/50 font-bold uppercase tracking-widest block mb-1">Gravadora</span>
                     <span className="text-xl font-bold text-[#c5a059]">Carrera's</span>
                  </div>
               </div>

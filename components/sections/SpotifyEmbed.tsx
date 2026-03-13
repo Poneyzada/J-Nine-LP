@@ -17,7 +17,7 @@ export default function SpotifyEmbed() {
         </div>
         <iframe 
           style={{ borderRadius: "2rem" }} 
-          src="https://open.spotify.com/embed/track/3Xb4bB2bYJdY5uIrt34yXb?utm_source=generator&theme=0" 
+          src="https://open.spotify.com/embed/track/4d9K3VpP9JjY2Bw4P6c9zM?utm_source=generator&theme=0" 
           width="100%" 
           height="152" 
           frameBorder="0" 

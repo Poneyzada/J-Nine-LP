@@ -12,7 +12,7 @@ export default function BusinessHub() {
          <img 
            src="/J-nine-foto.jpeg"
            alt="JOTTANINE Live"
-           className="w-full h-full object-cover object-[center_20%] opacity-80 mix-blend-luminosity brightness-75 transition-opacity duration-1000"
+           className="w-full h-full object-cover object-center opacity-80 mix-blend-luminosity brightness-75 transition-opacity duration-1000"
          />
          <div className="absolute inset-0 bg-gradient-to-r from-[#0f0b0a] via-[#0f0b0a]/80 to-transparent" />
          <div className="absolute inset-0 bg-gradient-to-t from-[#0f0b0a] via-transparent to-[#0f0b0a]" />
@@ -29,12 +29,12 @@ export default function BusinessHub() {
              whileInView={{ opacity: 1, y: 0 }}
              className="relative"
           >
-            <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] block mb-4">Subscribe to Get</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.5em] text-[#c5a059] block mb-4">Acesso Exclusivo para</span>
             <h2 className="text-5xl md:text-7xl font-bold uppercase leading-[0.9] text-white tracking-tighter">
-              Direct <span className="text-[#c5a059] italic heading-serif font-medium">Booking.</span>
+              Contato <span className="text-[#c5a059] font-black">Direto.</span>
             </h2>
             <p className="text-white/50 mt-8 text-lg leading-relaxed max-w-md">
-              Secure priority access for live performances, exclusive features, and composition slots through <span className="text-white font-bold">CARRERA’S</span>.
+              Garanta acesso prioritário para shows, participações exclusivas (feats) e parcerias em composição através da <span className="text-white font-bold">CARRERA’S</span>.
             </p>
           </motion.div>
           
@@ -48,8 +48,8 @@ export default function BusinessHub() {
                 <Mic className="text-[#c5a059] w-6 h-6" />
               </div>
               <div>
-                <h4 className="font-bold text-lg uppercase text-white tracking-wide">Live Shows</h4>
-                <p className="text-xs text-white/40 mt-1 uppercase tracking-widest">National Tour & Festivals</p>
+                <h4 className="font-bold text-lg uppercase text-white tracking-wide">Shows</h4>
+                <p className="text-xs text-white/40 mt-1 uppercase tracking-widest">Turnês Nacionais e Festivais</p>
               </div>
             </motion.div>
             
@@ -64,7 +64,7 @@ export default function BusinessHub() {
               </div>
               <div>
                 <h4 className="font-bold text-lg uppercase text-white tracking-wide">Composição</h4>
-                <p className="text-xs text-white/40 mt-1 uppercase tracking-widest">Writing & Licensing</p>
+                <p className="text-xs text-white/40 mt-1 uppercase tracking-widest">Licenciamento e Autoria</p>
               </div>
             </motion.div>
           </div>
@@ -79,13 +79,13 @@ export default function BusinessHub() {
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#c5a059]/20 blur-[100px] rounded-full pointer-events-none" />
           
           <div>
-            <h3 className="text-2xl font-bold text-white mb-2">Send Proposal</h3>
-            <p className="text-xs text-white/40 uppercase tracking-widest">Premium Access Only</p>
+            <h3 className="text-2xl font-bold text-white mb-2">Enviar Proposta</h3>
+            <p className="text-xs text-white/40 uppercase tracking-widest">Bate-papo Direto com a Equipe</p>
           </div>
 
           <form className="space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Category</label>
+              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Categoria</label>
               <div className="relative">
                 <select className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] focus:outline-none appearance-none cursor-pointer hover:border-white/20 transition-colors">
                   <option>CONTRATAR SHOWS</option>
@@ -97,17 +97,17 @@ export default function BusinessHub() {
             </div>
             
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Entity Name</label>
-              <input type="text" placeholder="Nome ou Empresa" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
+              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Nome ou Empresa</label>
+              <input type="text" placeholder="Gabi da Produtora" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
             </div>
 
             <div className="space-y-2">
-              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Direct Contact</label>
-              <input type="tel" placeholder="WhatsApp" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
+              <label className="text-[10px] font-bold uppercase text-[#c5a059] tracking-[0.2em] ml-1">Contato (WhatsApp)</label>
+              <input type="tel" placeholder="(11) 99999-9999" className="w-full bg-[var(--background-card)] border border-white/10 rounded-2xl py-5 px-6 text-sm font-bold text-white focus:border-[#c5a059] transition-all focus:outline-none hover:border-white/20 placeholder:text-white/20" />
             </div>
 
             <button className="w-full py-6 mt-4 bg-[#c5a059] text-black font-extrabold rounded-2xl shadow-[0_0_30px_rgba(197,160,89,0.3)] hover:scale-[1.02] transition-transform uppercase tracking-widest text-[11px]">
-              Submit Request
+              Enviar Solicitação
             </button>
           </form>
         </motion.div>
