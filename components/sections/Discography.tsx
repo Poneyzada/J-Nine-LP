@@ -15,7 +15,7 @@ const albums = [
     isSong: true,
   },
   {
-    title: "Fechamento (part. JOTTANINE)",
+    title: "Fechamento (part. Jotta Nine)",
     type: "Feat" as FilterType,
     cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
     links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://youtu.be/LozSjV0b04k", apple: "#" },
@@ -64,7 +64,7 @@ export default function Discography() {
               <span className="text-[#c5a059] font-black">Em Alta</span> na Semana.
             </h2>
             <p className="text-white/40 text-sm mt-4 max-w-sm leading-relaxed">
-              Explore os lançamentos mais recentes criados por JOTTANINE. Não perca as faixas mais tocadas e pedidas nos shows.
+              Explore os lançamentos mais recentes criados por Jotta Nine. Não perca as faixas mais tocadas e pedidas nos shows.
             </p>
           </motion.div>
           
@@ -102,7 +102,7 @@ export default function Discography() {
                 className="flex flex-col items-center"
               >
                 <MusicArtwork 
-                  artist="JOTTANINE"
+                  artist="Jotta Nine"
                   music={album.title}
                   albumArt={album.cover}
                   isSong={album.isSong}
