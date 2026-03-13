@@ -1,70 +1,69 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with J-rosto.jpeg */}
+    <header className="relative min-h-screen flex flex-col justify-end pb-24 px-6 md:px-20 overflow-hidden bg-black">
+      {/* BACKGROUND PHOTO (Hand on face) */}
       <div className="absolute inset-0 z-0">
-        <Image 
+        <img 
           src="/J-rosto.jpeg" 
-          alt="JOTTANINE" 
-          fill 
-          className="object-cover opacity-60 grayscale hover:grayscale-0 transition-opacity duration-1000"
-          priority
+          className="w-full h-full object-cover object-center grayscale opacity-80" 
+          alt="J NINE" 
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        <div 
+          className="absolute inset-0" 
+          style={{ background: 'linear-gradient(to bottom, rgba(13,11,10,0.2) 0%, rgba(13,11,10,0.6) 60%, rgba(13,11,10,1) 100%)' }} 
+        />
+        <div 
+          className="absolute inset-0" 
+          style={{ background: 'linear-gradient(to right, rgba(13,11,10,0.8) 0%, transparent 50%)' }} 
+        />
       </div>
 
-      <div className="container relative z-10 px-6 mx-auto flex flex-col items-center text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="max-w-4xl"
+      <div className="relative z-10 max-w-5xl space-y-12">
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="font-mono text-[10px] tracking-[0.7em] text-[#c5a059] uppercase"
         >
-          <span className="text-[#c5a059] font-bold tracking-[0.3em] text-xs mb-6 block uppercase">Official Artist Page</span>
-          <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-6 text-white leading-none">
-            JOTTA<span className="text-[#c5a059]">NINE</span>
-          </h1>
-          <p className="text-lg md:text-2xl font-medium text-white/70 max-w-2xl mx-auto leading-relaxed font-outfit px-4">
-            Transformando visão em som. Artista, compositor e visionário da <span className="text-white">Carrera's Produções</span>.
-          </p>
-          
-          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="w-full sm:w-auto px-10 py-4 bg-[#c5a059] text-black font-bold rounded-full hover:scale-105 transition-all shadow-[0_0_30px_rgba(197,160,89,0.2)]">
-              OUVIR LANÇAMENTO
-            </button>
-            <button className="w-full sm:w-auto px-10 py-4 border border-white/20 hover:bg-white/10 text-white font-bold rounded-full transition-all backdrop-blur-md">
-              CONTRATAR SHOW
-            </button>
-          </div>
+          Artista & Compositor · Lifestyle
+        </motion.p>
+        
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="text-[clamp(4rem,12vw,10rem)] font-black tracking-tighter leading-[0.8] uppercase text-white"
+        >
+          JOTTA<br/><span className="text-[#c5a059]">NINE.</span>
+        </motion.h1>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-white/50 text-xl md:text-2xl font-serif italic max-w-lg leading-relaxed"
+        >
+          "A caneta é o meu instrumento.<br/>Do Underground às paradas de sucesso."
+        </motion.p>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="flex flex-wrap gap-6"
+        >
+          <a href="#music" className="inline-flex items-center gap-3 px-10 py-4 bg-[#c5a059] text-white font-black rounded-full text-[10px] tracking-widest uppercase hover:scale-105 transition-all shadow-xl shadow-[#c5a059]/30">
+            Ouça os Lançamentos
+          </a>
+          <a href="#business" className="inline-flex items-center gap-3 px-10 py-4 border border-white/10 text-white/60 font-black rounded-full text-[10px] tracking-widest uppercase hover:border-[#c5a059] hover:text-white transition-all">
+            Booking & Rights
+          </a>
         </motion.div>
       </div>
-
-      {/* Stats Bar Integrated - Better Mobile Grid */}
-      <div className="absolute bottom-0 left-0 w-full bg-black/60 backdrop-blur-2xl border-t border-white/10 py-10 z-20">
-        <div className="container mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4 text-center">
-          <div className="space-y-1">
-            <div className="text-3xl md:text-4xl font-bold text-[#c5a059]">150+</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/40">Composições</div>
-          </div>
-          <div className="space-y-1">
-            <div className="text-3xl md:text-4xl font-bold text-[#c5a059]">1M+</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/40">Streams</div>
-          </div>
-          <div className="space-y-1">
-            <div className="text-3xl md:text-4xl font-bold text-[#c5a059]">20+</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/40">Colaborações</div>
-          </div>
-          <div className="space-y-1">
-            <div className="text-3xl md:text-4xl font-bold text-[#c5a059]">Carrera</div>
-            <div className="text-[10px] uppercase tracking-[0.2em] text-white/40">Produções</div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </header>
   );
 }

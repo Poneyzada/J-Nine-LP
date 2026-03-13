@@ -1,29 +1,36 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function Footer() {
   return (
-    <footer className="py-20 bg-black border-t border-white/5">
-      <div className="container px-6 mx-auto text-center">
-        <h2 className="text-8xl md:text-[12rem] font-bold tracking-tighter text-white/5 select-none mb-12">
-          JOTTANINE
-        </h2>
-        
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pt-12 border-t border-white/10">
-          <div className="text-white/40 text-sm font-bold tracking-widest uppercase">
-            © 2024 Carrera's Produções
-          </div>
-          
-          <div className="flex items-center gap-12 text-sm font-bold tracking-widest uppercase">
-            <a href="https://open.spotify.com/user/31yspvh5mwsopagom4m7zxc6antm?si=Bk8s-LqyQqqoBOHnr6Pshw" target="_blank" rel="noopener noreferrer" className="text-white hover:text-[#c5a059] transition-colors">Spotify</a>
-            <a href="#" className="text-white hover:text-[#c5a059] transition-colors">YouTube</a>
-            <a href="#" className="text-white hover:text-[#c5a059] transition-colors">Instagram</a>
-          </div>
-
-          <div className="text-white/40 text-xs">
-            Feito com visão artística
-          </div>
-        </div>
+    <footer className="py-24 bg-black text-center border-t border-white/5 px-6 relative overflow-hidden">
+      <h2 className="text-[15vw] font-black uppercase select-none leading-none mb-12 opacity-[0.03] text-white">
+        JOTTANINE
+      </h2>
+      <div className="flex justify-center gap-8 mb-12 flex-wrap">
+        <a 
+          href="#" 
+          className="text-white/20 hover:text-[#c5a059] transition-all font-bold uppercase text-[10px] tracking-widest"
+        >
+          Spotify
+        </a>
+        <a 
+          href="#" 
+          className="text-white/20 hover:text-[#c5a059] transition-all font-bold uppercase text-[10px] tracking-widest"
+        >
+          YouTube
+        </a>
+        <a 
+          href="#" 
+          className="text-white/20 hover:text-[#c5a059] transition-all font-bold uppercase text-[10px] tracking-widest"
+        >
+          Instagram
+        </a>
       </div>
+      <p className="text-[10px] font-mono text-white/20 uppercase tracking-[0.5em]">
+        2024 · CARRERA'S PRODUÇÕES · HUB OFICIAL
+      </p>
     </footer>
   );
 }
