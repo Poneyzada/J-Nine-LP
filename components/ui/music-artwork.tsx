@@ -232,24 +232,23 @@ export default function MusicArtwork({
             {/* Platform Buttons - Responsive and Refined */}
       <div className={`mt-6 flex justify-center gap-4 transition-all duration-500 ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 sm:opacity-60 sm:translate-y-0'}`}>
         {links?.spotify && (
-          <a href={links.spotify} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#1DB954]/10 border border-[#1DB954]/20 rounded-full hover:bg-[#1DB954] transition-all group">
-             <Image src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" width={18} height={18} className="group-hover:brightness-0 group-hover:invert" />
+          <a href={links.spotify} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-[#1DB954]/10 border border-[#1DB954]/20 rounded-full hover:bg-[#1DB954] transition-all group">
+             <Image src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" width={20} height={20} className="group-hover:brightness-0 group-hover:invert" />
           </a>
         )}
         {links?.youtube && (
-          <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-[#FF0000]/10 border border-[#FF0000]/20 rounded-full hover:bg-[#FF0000] transition-all group">
-             <Image src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" width={18} height={18} />
+          <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-[#FF0000]/10 border border-[#FF0000]/20 rounded-full hover:bg-[#FF0000] transition-all group">
+             <Image src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="YouTube" width={20} height={20} />
           </a>
         )}
         {links?.apple && (
-          <a href={links.apple} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 border border-white/20 rounded-full hover:bg-white transition-all group">
-             <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music" width={18} height={18} className="invert group-hover:invert-0" />
+          <a href={links.apple} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-white/10 border border-white/20 rounded-full hover:bg-white transition-all group">
+             <Image src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Music" width={20} height={20} className="invert group-hover:invert-0" />
           </a>
         )}
         {links?.deezer && (
-          <a href={links.deezer} target="_blank" rel="noopener noreferrer" className="p-2.5 bg-white/10 border border-white/20 rounded-full hover:bg-white transition-all group">
-            {/* Using a generic music icon for Deezer as placeholder if needed, or just text. We will use an icon. */}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-black">
+          <a href={links.deezer} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-white/10 border border-white/20 rounded-full hover:bg-white transition-all group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-black">
               <path d="M9 18V5l12-2v13"></path>
               <circle cx="6" cy="18" r="3"></circle>
               <circle cx="18" cy="16" r="3"></circle>
