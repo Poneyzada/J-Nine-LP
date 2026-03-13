@@ -15,11 +15,11 @@ export default function Stats() {
           <p className="font-mono text-[9px] text-white/50 uppercase tracking-[0.4em] mt-3 font-bold">Streams Totais</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-          <p className="text-4xl lg:text-5xl font-black text-[#c5a059]">150+</p>
+          <p className="text-4xl lg:text-5xl font-black text-[#c5a059]">40+</p>
           <p className="font-mono text-[9px] text-white/50 uppercase tracking-[0.4em] mt-3 font-bold">Composições</p>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-          <p className="text-4xl lg:text-5xl font-black text-[#c5a059]">12+</p>
+          <p className="text-4xl lg:text-5xl font-black text-[#c5a059]">1+</p>
           <p className="font-mono text-[9px] text-white/50 uppercase tracking-[0.4em] mt-3 font-bold">Colaborações</p>
         </motion.div>
       </div>
