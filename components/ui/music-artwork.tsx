@@ -132,6 +132,15 @@ export default function MusicArtwork({
       {/* Component-specific styles */}
       <style jsx>{componentStyles}</style>
       
+      {/* Mobile Title - Visible only on small screens (Fixes user report) */}
+      <div className="sm:hidden flex flex-col items-center mb-6">
+          <div className="bg-neutral-900/90 backdrop-blur-xl text-white px-4 py-2 rounded-2xl text-[10px] font-black uppercase tracking-[0.2em] border border-white/10 shadow-2xl">
+            <span className="text-white">{artist}</span>
+            <span className="text-[#c5a059] mx-2">•</span>
+            <span className="text-white/60">{music}</span>
+          </div>
+      </div>
+
       {/* Enhanced Tooltip that follows cursor - Desktop only */}
       {isHovered && (
         <div
@@ -142,8 +151,8 @@ export default function MusicArtwork({
             transform: 'translateZ(0)', // Force hardware acceleration
           }}
         >
-          <div className="bg-neutral-900/90 backdrop-blur-md text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg border border-neutral-700/50 animate-in fade-in zoom-in-95 duration-200">
-            <span className="font-bold">{artist}</span> &nbsp;•&nbsp; {music}
+          <div className="bg-neutral-900/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-xs font-bold whitespace-nowrap shadow-2xl border border-white/10 animate-in fade-in zoom-in-95 duration-200">
+            <span className="font-bold text-[#c5a059]">{artist}</span> &nbsp;•&nbsp; {music}
           </div>
         </div>
       )}
