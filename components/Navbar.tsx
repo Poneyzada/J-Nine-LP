@@ -24,8 +24,8 @@ export default function Navbar() {
         scrolled ? "py-4 bg-black/80 backdrop-blur-xl border-b border-white/5" : "py-8 bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tighter text-white group">
+      <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
+        <a href="#" className="text-xl md:text-2xl font-bold tracking-tighter text-white group">
           JOTTA<span className="text-[#c5a059] group-hover:text-white transition-colors">NINE</span>
         </a>
 
@@ -45,24 +45,19 @@ export default function Navbar() {
             target="_blank" 
             className="px-6 py-2.5 bg-[#1DB954] text-white font-bold rounded-full text-xs hover:scale-105 transition-all shadow-[0_0_20px_rgba(29,185,84,0.3)]"
           >
-            OUVIR AGORA
+            OUVIR NO SPOTIFY
           </a>
         </div>
 
-        {/* Mobile Navigation - Simplified for better fit */}
-        <div className="md:hidden flex items-center gap-4">
-           <a 
-            href="#show" 
-            className="text-[10px] font-bold text-white/60 uppercase tracking-tighter"
-          >
-            Shows
-          </a>
+        {/* Mobile Navigation - Ultra Minimal to fit any screen */}
+        <div className="md:hidden flex items-center gap-3">
           <a 
             href="https://open.spotify.com/user/31yspvh5mwsopagom4m7zxc6antm?si=Bk8s-LqyQqqoBOHnr6Pshw" 
             target="_blank" 
-            className="px-4 py-2 bg-[#1DB954] text-white font-bold rounded-full text-[10px] hover:scale-105 transition-all"
+            className="px-4 py-2 bg-[#1DB954] text-white font-bold rounded-full text-[10px] hover:scale-105 transition-all flex items-center gap-2"
           >
-            SPOTIFY
+            <Image src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" width={14} height={14} className="brightness-0 invert" />
+            OUVIR
           </a>
         </div>
       </div>

@@ -32,23 +32,23 @@ export default function Discography() {
           <div className="w-24 h-1 bg-[#c5a059] rounded-full" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-24 justify-items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-24 md:gap-24 justify-items-center">
           <MusicArtwork 
             artist="JOTTANINE" 
             music="Planos" 
-            albumArt="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop"
+            albumArt="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format"
             isSong={true}
           />
           <MusicArtwork 
             artist="JOTTANINE" 
             music="Visão de Ouro" 
-            albumArt="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format&fit=crop"
+            albumArt="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format"
             isSong={true}
           />
           <MusicArtwork 
             artist="JOTTANINE" 
             music="Resiliência" 
-            albumArt="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop"
+            albumArt="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format"
             isSong={true}
           />
         </div>

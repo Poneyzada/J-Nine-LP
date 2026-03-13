@@ -50,14 +50,14 @@ export default function PreSave() {
 
           <div className="bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-md">
             <h3 className="text-xl font-bold mb-6">FAÇA O PRE-SAVE E SEJA O PRIMEIRO A OUVIR</h3>
-            <form className="flex flex-col gap-4">
+            <form className="flex flex-col space-y-4">
               <input 
                 type="email" 
                 placeholder="Seu melhor e-mail" 
-                className="w-full px-6 py-4 bg-black border border-white/10 rounded-xl focus:border-[#c5a059] outline-none transition-colors"
+                className="w-full px-6 py-4 bg-black border border-white/10 rounded-xl focus:border-[#c5a059] outline-none transition-colors text-white"
                 required
               />
-              <button className="w-full py-4 bg-[#c5a059] text-black font-bold rounded-xl hover:scale-[1.02] transition-transform">
+              <button className="w-full py-4 bg-[#c5a059] text-black font-bold rounded-xl hover:scale-[1.02] transition-transform shadow-xl">
                  GARANTIR ACESSO ANTECIPADO
               </button>
             </form>
