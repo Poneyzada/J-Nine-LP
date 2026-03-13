@@ -15,7 +15,7 @@ const albums = [
     isSong: true,
   },
   {
-    title: "Fechamento (part. Jotta Nine)",
+    title: "Fechamento (feat. Ítalo Melo)",
     type: "Feat" as FilterType,
     cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
     links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://youtu.be/LozSjV0b04k", apple: "#" },

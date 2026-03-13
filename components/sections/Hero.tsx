@@ -62,7 +62,7 @@ export default function Hero() {
                  <svg viewBox="0 0 100 100" className="w-full h-full text-white/70">
                     <path id="curve" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" fill="transparent" />
                     <text className="text-[14px] font-bold uppercase tracking-[4px]" fill="currentColor">
-                      <textPath href="#curve">Jotta Nine • Ítalo Melo • Jotta Nine • Ítalo Melo</textPath>
+                      <textPath href="#curve">Artista Jotta Nine • Artista Jotta Nine •</textPath>
                     </text>
                  </svg>
                  <div className="absolute w-2 h-2 bg-[#c5a059] rounded-full" />
