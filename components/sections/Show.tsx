@@ -11,7 +11,7 @@ interface ShowVideo {
 }
 
 const showVideos: ShowVideo[] = [
-  { id: "ypezb2IZFI4", title: "Jottanine - YouTube Video", type: "Videoclipe" },
+  { id: "LozSjV0b04k", title: "Jottanine - YouTube Video", type: "Videoclipe" },
   { id: "dQw4w9WgXcQ", title: "Bastidores: Ciclos (Doc)", type: "Bastidores" },
   { id: "dQw4w9WgXcQ", title: "Ao Vivo no Studio 18h", type: "Performance ao Vivo" },
 ];
