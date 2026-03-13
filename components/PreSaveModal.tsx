@@ -102,19 +102,22 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
                       <div className="space-y-4">
                         <p className="text-[10px] font-black text-white/30 tracking-[0.3em] uppercase mb-6">Selecione sua plataforma</p>
                         <button 
-                          onClick={() => handlePreSave("#")} 
+                          type="button"
+                          onClick={() => handlePreSave("https://open.spotify.com/album/2e5286A86YD0qG9systX3C")} 
                           className="w-full py-5 bg-[#1DB954] text-black font-black rounded-2xl flex items-center justify-center hover:scale-[1.02] transition-all shadow-xl shadow-[#1DB954]/20 uppercase tracking-widest text-xs"
                         >
                            Pre-Save no Spotify
                         </button>
                         <button 
-                          onClick={() => handlePreSave("#")} 
+                          type="button"
+                          onClick={() => handlePreSave("https://music.apple.com/br/album/fechamento-feat-jottanine-single/1745749319")} 
                           className="w-full py-5 bg-white text-black font-black rounded-2xl flex items-center justify-center hover:scale-[1.02] transition-all shadow-xl uppercase tracking-widest text-xs"
                         >
                            Pre-Save na Apple Music
                         </button>
                         <button 
-                          onClick={() => handlePreSave("#")} 
+                          type="button"
+                          onClick={() => handlePreSave("https://www.deezer.com/br/album/584950942")} 
                           className="w-full py-5 bg-[#000000] border border-white/20 text-white font-black rounded-2xl flex items-center justify-center hover:scale-[1.02] transition-all shadow-xl uppercase tracking-widest text-xs"
                         >
                            Pre-Save na Deezer
@@ -137,18 +140,19 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
 
                       <div className="space-y-4">
                         <p className="text-[10px] font-black text-[#c5a059] tracking-[0.3em] uppercase mb-6">Entrar para o Inner Circle</p>
-                        <a href="https://wa.me/..." target="_blank" className="w-full py-5 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] font-black rounded-2xl flex items-center justify-center hover:bg-[#25D366] hover:text-black transition-all uppercase tracking-widest text-xs">
+                        <a href="https://chat.whatsapp.com/Gis7R9hL8zW3z8" target="_blank" className="w-full py-5 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] font-black rounded-2xl flex items-center justify-center hover:bg-[#25D366] hover:text-black transition-all uppercase tracking-widest text-xs">
                            Comunidade no WhatsApp
                         </a>
-                        <a href="https://t.me/..." target="_blank" className="w-full py-5 bg-[#24A1DE]/10 border border-[#24A1DE]/20 text-[#24A1DE] font-black rounded-2xl flex items-center justify-center hover:bg-[#24A1DE] hover:text-black transition-all uppercase tracking-widest text-xs">
+                        <a href="https://t.me/jottanine" target="_blank" className="w-full py-5 bg-[#24A1DE]/10 border border-[#24A1DE]/20 text-[#24A1DE] font-black rounded-2xl flex items-center justify-center hover:bg-[#24A1DE] hover:text-black transition-all uppercase tracking-widest text-xs">
                            Canal no Telegram
                         </a>
-                        <a href="https://discord.gg/..." target="_blank" className="w-full py-5 bg-[#5865F2]/10 border border-[#5865F2]/20 text-[#5865F2] font-black rounded-2xl flex items-center justify-center hover:bg-[#5865F2] hover:text-black transition-all uppercase tracking-widest text-xs">
+                        <a href="https://discord.gg/jottanine" target="_blank" className="w-full py-5 bg-[#5865F2]/10 border border-[#5865F2]/20 text-[#5865F2] font-black rounded-2xl flex items-center justify-center hover:bg-[#5865F2] hover:text-black transition-all uppercase tracking-widest text-xs">
                            Server no Discord
                         </a>
                       </div>
 
                       <button 
+                        type="button"
                         onClick={() => setStep("platforms")}
                         className="text-[10px] text-white/30 uppercase tracking-widest font-black hover:text-white transition-colors block w-full text-center"
                       >
