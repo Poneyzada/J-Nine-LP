@@ -18,7 +18,7 @@ const albums = [
     title: "Fechamento (part. Jotta Nine)",
     type: "Feat" as FilterType,
     cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
-    links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://www.youtube.com/watch?v=ypezb2IZFI4", apple: "#" },
+    links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://youtu.be/ypezb2IZFI4", apple: "#" },
     isSong: true,
   },
   {
