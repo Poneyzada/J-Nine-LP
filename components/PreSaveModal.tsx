@@ -68,7 +68,7 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2">
-              <div className="relative aspect-square md:aspect-auto h-full min-h-[400px] overflow-hidden">
+              <div className="relative aspect-square md:aspect-auto h-full min-h-[350px] overflow-hidden">
                 <div className={`absolute inset-0 transition-transform duration-[3000ms] ease-out scale-110 ${!isReleased ? 'blur-2xl opacity-50' : 'opacity-80'}`}>
                   <Image src={RELEASE_CONFIG.coverImage} alt="Cover" fill className="object-cover" unoptimized />
                 </div>
@@ -84,7 +84,7 @@ export default function PreSaveModal({ isOpen, onClose }: PreSaveModalProps) {
                 )}
               </div>
 
-              <div className="p-10 md:p-16 flex flex-col justify-center relative bg-gradient-to-br from-white/[0.02] to-transparent">
+              <div className="p-10 md:p-14 lg:p-16 flex flex-col justify-center relative bg-gradient-to-br from-white/[0.02] to-transparent overflow-y-auto max-h-[90vh]">
                 <AnimatePresence mode="wait">
                   {step === "platforms" ? (
                     <motion.div
