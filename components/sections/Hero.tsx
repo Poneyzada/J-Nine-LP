@@ -29,7 +29,7 @@ export default function Hero() {
             Jotta <span className="text-[#c5a059] font-black">nine.</span>
           </h1>
           <p className="text-lg md:text-xl font-medium text-white/50 max-w-lg leading-relaxed mt-4">
-            Jotta Nine é uma experiência musical imersiva que mistura as raízes do underground baiano (Bahia/Brasil) com estética premium. Explore singles, composições e contratação de shows.
+            Jotta Nine é uma experiência musical imersiva que mistura as raízes do underground baiano (Bahia/Brasil). Explore singles, composições e contratação de shows.
           </p>
           
           <div className="mt-8 flex flex-wrap items-center gap-6">

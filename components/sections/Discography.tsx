@@ -11,14 +11,14 @@ const albums = [
     title: "Luz Púrpura",
     type: "Single" as FilterType,
     cover: "https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=800",
-    links: { spotify: "#", youtube: "#", apple: "#", deezer: "#" },
+    links: { spotify: "#", youtube: "https://youtu.be/LozSjV0b04k", apple: "#", deezer: "#" },
     isSong: true,
   },
   {
     title: "Fechamento (part. Jotta Nine)",
     type: "Feat" as FilterType,
     cover: "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02ddf45c5c53aec81dc3b18188",
-    links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://youtu.be/ypezb2IZFI4", apple: "#" },
+    links: { spotify: "https://open.spotify.com/track/0oEdCkFMNH2wH0cgeWmS6i", youtube: "https://youtu.be/LozSjV0b04k", apple: "#" },
     isSong: true,
   },
   {
